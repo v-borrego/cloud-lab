@@ -4,3 +4,7 @@ services:
 script:
   - ls
   - docker build -t cloudexercise .
+after success:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - docker tag cloudexercise $DOCKER_USER/cloudexercise
+  - docker push $DOCKER_USER/cloudexercise
