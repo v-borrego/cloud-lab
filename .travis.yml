@@ -2,4 +2,5 @@ sudo: required
 services:
   - docker
 script:
+  - ls
   - docker build -t cloudexercise . -f ./Dockerfile
