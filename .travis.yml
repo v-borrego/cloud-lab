@@ -3,4 +3,4 @@ services:
   - docker
 script:
   - ls
-  - docker build -t cloudexercise . -f ./Dockerfile
+  - docker build -t cloudexercise .
