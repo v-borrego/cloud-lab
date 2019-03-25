@@ -1,5 +1,13 @@
 FROM ubuntu:18.04
-FROM node:10
+
+USER root
+
+RUN apt-get update
+RUN apt-get -y install curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_10.x  | bash -
+RUN apt-get -y install nodejs
+
+RUN nodejs --version
 
 WORKDIR /opt/app
 
